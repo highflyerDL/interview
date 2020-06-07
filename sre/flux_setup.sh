@@ -6,7 +6,7 @@ fluxctl install \
 --git-user=${GHUSER} \
 --git-email=${GHUSER}@users.noreply.github.com \
 --git-url=git@github.com:${GHUSER}/interview \
---git-path=namespaces,workloads \
+--git-path=sre/manifests \
 --namespace=flux | kubectl apply -f -
 kubectl -n flux rollout status deployment/flux
 echo "Immediately sync your kube cluster with github..."
